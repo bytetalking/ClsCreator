@@ -4,8 +4,9 @@ ClsCreator
 An ActionScript code generate lib
 
 
-hello world
-----------
+##hello world
+
+```js
 var cls:Cls = new Cls("HelloWorld", new Pack(""));
 cls.setSuperClass(new SuperCls(Sprite));
 
@@ -15,8 +16,10 @@ m.addStatement(new Statement("trace(\"hello, world\")"));
 cls.addPropertys(m);
 
 trace(cls.toString());
+```
 
 --output
+```js
 package 
 {
 	import flash.display.Sprite;
@@ -28,3 +31,4 @@ package
 		}
 	}
 }
+```
