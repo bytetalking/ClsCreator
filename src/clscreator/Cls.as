@@ -145,7 +145,7 @@
                 str  += p.toString();
             };
             str += this.getIndent() + "}" + this.getNewline();
-            return "/**Powerd by  see the licenses.txt.**/" + this.getNewline() + str + "}";
+            return "/**Powerd by https://github.com/babyfaction see the licenses.md.**/" + this.getNewline() + str + "}";
         }
         public function getPropertyByName(name:String):Property{
             var p:Property;
