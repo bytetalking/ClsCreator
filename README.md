@@ -1,7 +1,7 @@
 ClsCreator
 ==========
 
-An ActionScript code generate lib
+An ActionScript3 code generate lib
 
 
 ##hello world
