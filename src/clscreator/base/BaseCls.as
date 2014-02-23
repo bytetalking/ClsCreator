@@ -6,6 +6,8 @@
 	 */	
     public class BaseCls {
 
+		private static var NEW_LINE:String = "\r";
+		
         public function BaseCls(){
             super();
         }
@@ -24,8 +26,12 @@
 		 * @return 
 		 */		
         public function getNewline():String{
-            return "\r";
+            return NEW_LINE;
         }
+		
+		public static function setNewline(str:String):void{
+			NEW_LINE = str;
+		}
 
     }
 }
