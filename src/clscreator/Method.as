@@ -32,12 +32,12 @@
             var len:uint = this.params.length;
             i = 0;
             while (i < len) {
-                a.push(ParamBase(this.params[i]).toString());
+                a.push(Param(this.params[i]).toString());
                 i++;
             };
             return a.join(",");
         }
-        public function addParams(p:ParamBase):void{
+        public function addParams(p:Param):void{
             if (!p){
                 return;
             };

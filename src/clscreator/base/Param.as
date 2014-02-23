@@ -5,7 +5,7 @@
 	 * Parameter, use in the method
 	 * @author babyfaction
 	 */	
-    public class ParamBase {
+    public class Param {
 
         private var pType:String; //parameter type
         private var defaultValue:String;
@@ -18,7 +18,7 @@
 		 * @param defaultValue
 		 * 
 		 */		
-        public function ParamBase(pname:String, ptype:Object, defaultValue:Object=null){
+        public function Param(pname:String, ptype:Object, defaultValue:Object=null){
             var a:Array;
             super();
             setName(pname);

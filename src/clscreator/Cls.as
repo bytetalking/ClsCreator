@@ -96,7 +96,7 @@
         }
         public function addPropertys(p:Property):void{
             var a:Array;
-            var pa:ParamBase;
+            var pa:Param;
             if (!this.Propertys){
                 this.Propertys = new Array();
             };
