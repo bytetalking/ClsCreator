@@ -17,6 +17,7 @@ var m:Method = new Method("hi", Method.VOID, Property.PUBLIC);
 m.addStatement(new Statement("trace(\"hello, world\")"));
 
 cls.addPropertys(m);
+trace(cls.toString());
 ```
 
 --output
