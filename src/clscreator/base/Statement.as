@@ -19,7 +19,7 @@
             return this.statementStr;
         }
         public function toString():String{
-            return this.getIndent() + this.statementStr + this.getNewline();
+            return this.getIndent() + this.statementStr + BaseCls.NEW_LINE;
         }
         public function setStatement(s:String):void{
             this.statementStr = s;

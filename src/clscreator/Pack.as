@@ -23,7 +23,7 @@
             this.folders.splice(i, 0);
         }
         public function toString():String{
-            return Name + " " + this.folders.join(".") + getNewline();
+            return Name + " " + this.folders.join(".") + BaseCls.NEW_LINE;
         }
         public function addFolder(folder:String):void{
             this.folders.push(folder);

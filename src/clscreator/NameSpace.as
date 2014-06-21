@@ -17,7 +17,7 @@
             return this.Name;
         }
         public function toString():String{
-            return getIndent() + "import " + Name + ";" + getNewline();
+            return getIndent() + "import " + Name + ";" + BaseCls.NEW_LINE;
         }
         override public function getIndent():String{
             return "\t";

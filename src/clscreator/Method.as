@@ -13,6 +13,7 @@
 
         private var statements:Array;
         private var params:Array;
+        private var comment:Comment;
 
         public function Method(name:String, returnType:Object, type:String="private", statement:Statement=null, isStatic:Boolean=false){
             statements = [];
@@ -37,6 +38,11 @@
             };
             return a.join(",");
         }
+		
+		public function setComment(c:Comment):void{
+			this.comment = c;
+		}
+		
         public function addParams(p:Param):void{
             if (!p){
                 return;
@@ -58,15 +64,18 @@
         override public function toString():String{
             var statement:Statement;
             var str:String = "";
+			
+			if(this.comment) str += this.getIndent() + this.comment + BaseCls.NEW_LINE;
+			
             str += this.getIndent();
             str += this.getType() + " ";
             str += (this.isStatic) ? "static " : "";
-            str += Mark + " " + this.getPropertyName() + "(" + this.createParamString() + "):" + this.getShortReturnType() + this.getNewline();
-            str += this.getIndent() + "{" + this.getNewline();
+            str += Mark + " " + this.getPropertyName() + "(" + this.createParamString() + "):" + this.getShortReturnType() + BaseCls.NEW_LINE;
+            str += this.getIndent() + "{" + BaseCls.NEW_LINE;
             for each (statement in this.statements) {
                 str += statement.toString();
             };
-            str += this.getIndent() + "}" + this.getNewline();
+            str += this.getIndent() + "}" + BaseCls.NEW_LINE;
             return str;
         }
         public function getParams():Array{

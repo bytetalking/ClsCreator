@@ -19,6 +19,8 @@
         private var NameSpaces:Array;
         private var type:String;
         private var superClass:SuperCls;
+		
+		private var comment:Comment;
 
 		/**
 		 * @param name class name
@@ -40,6 +42,10 @@
             setSuperClass(superClass);
             addNameSpaces(null);
         }
+		
+		public function setComment(c:Comment):void{
+			this.comment = c;
+		}
         public function getPack():Pack{
             return this.pack;
         }
@@ -128,10 +134,13 @@
             var n:NameSpace;
             var p:Property;
             var str:String = "";
-            str += this.pack.toString() + "{" + this.getNewline();
+            str += this.pack.toString() + "{" + BaseCls.NEW_LINE;
             for each (n in this.NameSpaces) {
                 str  += n.toString();
             };
+			
+			if(this.comment) str += this.getIndent() + this.comment.toString() + BaseCls.NEW_LINE;
+			
             str += this.getIndent() + this.type + " class " + this.clsName;
             if (this.superClass){
                 str  += this.superClass.toString();
@@ -140,12 +149,12 @@
                 str  += Interfa.Mark;
                 str  += this.Interfaces.join(",");
             };
-            str += this.getNewline() + this.getIndent() + "{" + this.getNewline();
+            str += BaseCls.NEW_LINE + this.getIndent() + "{" + BaseCls.NEW_LINE;
             for each (p in this.Propertys) {
                 str  += p.toString();
             };
-            str += this.getIndent() + "}" + this.getNewline();
-            return "/**Powerd by https://github.com/babyfaction see the licenses.md.**/" + this.getNewline() + str + "}";
+            str += this.getIndent() + "}" + BaseCls.NEW_LINE;
+            return "/**Powerd by https://github.com/babyfaction see the licenses.md.**/" + BaseCls.NEW_LINE + str + "}";
         }
         public function getPropertyByName(name:String):Property{
             var p:Property;
