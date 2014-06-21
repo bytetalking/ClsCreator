@@ -62,6 +62,8 @@
             return this.statements.concat();
         }
         override public function toString():String{
+			statements = statements.reverse();
+			
             var statement:Statement;
             var str:String = "";
 			

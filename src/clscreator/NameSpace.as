@@ -1,5 +1,7 @@
 ﻿package clscreator {
     import clscreator.base.*;
+    
+    import flash.utils.getQualifiedClassName;
 
 	/**
 	 * NameSpace (import xxx.xx...
@@ -7,17 +9,22 @@
 	 */	
     public class NameSpace extends BaseCls {
 
-        private var Name:String;
+        private var n:String;
 
-        public function NameSpace(Name:String){
+        public function NameSpace(name:Object){
             super();
-            this.Name = Name;
+			
+			if(name is String){
+            	this.n = name.toString();
+			}else{
+				this.n = getQualifiedClassName(name).split("::").join(".");
+			}
         }
         public function getName():String{
-            return this.Name;
+            return this.n;
         }
         public function toString():String{
-            return getIndent() + "import " + Name + ";" + BaseCls.NEW_LINE;
+            return getIndent() + "import " + n + ";" + BaseCls.NEW_LINE;
         }
         override public function getIndent():String{
             return "\t";

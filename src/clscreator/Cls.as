@@ -139,6 +139,8 @@
                 str  += n.toString();
             };
 			
+			str += BaseCls.NEW_LINE;
+			
 			if(this.comment) str += this.getIndent() + this.comment.toString() + BaseCls.NEW_LINE;
 			
             str += this.getIndent() + this.type + " class " + this.clsName;
