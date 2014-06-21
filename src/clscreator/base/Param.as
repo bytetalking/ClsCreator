@@ -28,7 +28,8 @@
                 setShortType(a.pop());
             } else {
                 setType(String(ptype));
-                setShortType(String(ptype));
+				a = String(ptype).split(".");
+                setShortType(a.pop());
             };
             if (defaultValue){
                 setDefaultValue(String(defaultValue));

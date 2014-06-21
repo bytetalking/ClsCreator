@@ -151,7 +151,7 @@
             };
             str += BaseCls.NEW_LINE + this.getIndent() + "{" + BaseCls.NEW_LINE;
             for each (p in this.Propertys) {
-                str  += p.toString();
+                str  += p.toString() + BaseCls.NEW_LINE;
             };
             str += this.getIndent() + "}" + BaseCls.NEW_LINE;
             return "/**Powerd by https://github.com/babyfaction see the licenses.md.**/" + BaseCls.NEW_LINE + str + "}";

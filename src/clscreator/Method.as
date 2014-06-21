@@ -36,7 +36,7 @@
                 a.push(Param(this.params[i]).toString());
                 i++;
             };
-            return a.join(",");
+            return a.join(", ");
         }
 		
 		public function setComment(c:Comment):void{
