@@ -1,8 +1,7 @@
 ClsCreator
 ==========
 
-An ActionScript3 code generate lib
-
+An ActionScript3 code generate lib，you can use as3 generate as3
 
 ##hello world
 
