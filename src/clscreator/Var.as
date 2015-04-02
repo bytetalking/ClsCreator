@@ -37,7 +37,7 @@
         override public function toString():String{
             var str:String = "";
 			
-			if(this.comment) str += this.getIndent() + this.comment + BaseCls.NEW_LINE;
+			if(this.comment) str += this.comment;// + BaseCls.NEW_LINE;this.getIndent() + 
 				
 			str += this.getIndent();
             str += this.getType() + " ";

@@ -67,7 +67,7 @@
             var statement:Statement;
             var str:String = "";
 			
-			if(this.comment) str += this.getIndent() + this.comment + BaseCls.NEW_LINE;
+			if(this.comment) str += this.comment;//this.getIndent() +  + BaseCls.NEW_LINE
 			
             str += this.getIndent();
             str += this.getType() + " ";
