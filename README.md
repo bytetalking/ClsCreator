@@ -34,3 +34,5 @@ package
 	}
 }
 ```
+##cases
+![image](https://github.com/babyfaction/ClsCreator/blob/master/cases/case1.jpg)
