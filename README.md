@@ -3,7 +3,7 @@ ClsCreator
 
 An ActionScript3 code generate lib，you can use as3 generate as3
 
-##hello world
+## hello world
 
 ```js
 var cls:Cls = new Cls("HelloWorld", new Pack(""));
@@ -19,7 +19,7 @@ cls.addPropertys(m);
 trace(cls.toString());
 ```
 
---output
+## output
 ```js
 package 
 {
@@ -34,5 +34,5 @@ package
 	}
 }
 ```
-##cases
-![image](https://github.com/babyfaction/ClsCreator/blob/master/cases/case1.jpg)
+## cases
+![image](https://raw.githubusercontent.com/babyfaction/ClsCreator/blob/master/cases/case1.jpg)
