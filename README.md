@@ -35,4 +35,4 @@ package
 }
 ```
 ## cases
-![image](https://raw.githubusercontent.com/babyfaction/ClsCreator/blob/master/cases/case1.jpg)
+![image](https://github.com/bytetalking/ClsCreator/blob/master/cases/case1.jpg?raw=true)
